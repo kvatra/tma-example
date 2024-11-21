@@ -176,7 +176,12 @@ iframe {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
 
-        console.log("qq", Telegram.WebApp.initDataUnsafe)
+        // console.log("tg_user_id", Telegram.WebApp.initDataUnsafe.user.id)
+
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://iframetester.com?tg_user_id=" + Telegram.WebApp.initDataUnsafe.user.id;
+        // iframe.src = "https://iframetester.com?tg_user_id=" + 3;
+        document.body.appendChild(iframe);
 
     </script>
 
