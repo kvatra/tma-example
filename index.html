@@ -76,7 +76,14 @@ iframe {
 </head>
 
 <body>
-    <iframe src="https://iframetester.com" title="description"></iframe>
+    <div id="store">
+
+    </div>
+    <!-- <iframe src="https://iframetester.com" title="description"></iframe> -->
+
+
+
+
     <!-- <main>
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
@@ -169,10 +176,12 @@ iframe {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
 
+        console.log("qq", Telegram.WebApp.initDataUnsafe)
+
     </script>
 
     <!-- Eruda is console for mobile browsers -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/eruda"></script> -->
-    <!-- <script>eruda.init();</script> -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
 </body>
 </html>
