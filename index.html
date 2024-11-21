@@ -6,7 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Telegram Mini Apps Vanilla JS Sample App</title>
     <style>
-        body {
+
+html, body, iframe {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+iframe {
+  width: 100%;
+  border: none;
+  overflow: hidden; /* Полосы прокрутки будут скрыты */
+}
+        
+
+        /* body {
             --bg-color: var(--tg-theme-bg-color);
             font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
             background-color: var(--bg-color);
@@ -58,12 +71,13 @@
         }
         #viewport-params-expand {
             top: 30px;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <main>
+    <iframe src="https://iframetester.com" title="description"></iframe>
+    <!-- <main>
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
@@ -87,7 +101,7 @@
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
-    </main>
+    </main> -->
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
@@ -136,12 +150,14 @@
         };
 
         function setViewportData() {
+            /*
             var sizeEl = document.getElementById('viewport-params-size');
             sizeEl.innerText = 'width: ' + window.innerWidth + ' x ' + 
                 'height: ' + Telegram.WebApp.viewportStableHeight;
 
             var expandEl = document.querySelector('#viewport-params-expand');
             expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
+            */
         }
 
         Telegram.WebApp.setHeaderColor('secondary_bg_color');
@@ -156,7 +172,7 @@
     </script>
 
     <!-- Eruda is console for mobile browsers -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/eruda"></script> -->
+    <!-- <script>eruda.init();</script> -->
 </body>
 </html>
